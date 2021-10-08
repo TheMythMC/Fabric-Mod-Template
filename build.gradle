@@ -34,9 +34,6 @@ dependencies {
     }
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
-    
-    // Used for configs, I want it anyway
-    implementation 'com.github.TheElectronWill:Night-Config:Tag'
 }
 
 processResources {
