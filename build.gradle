@@ -25,8 +25,12 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // config API (should really be in every mod tbh)
-    implementation "com.github.TheElectronWill:Night-Config:v${project.night_config_version}"
-    include "com.github.TheElectronWill:Night-Config:v${project.night_config_version}"
+    include(modApi("me.sargunvohra.mcmods:autoconfig1u:3.3.1")) {
+        exclude group: "net.fabricmc.fabric-api", module: "fabric-api"
+    }
+    include(modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.34")) {
+        exclude group: "net.fabricmc.fabric-api", module: "fabric-api"
+    }
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
     
